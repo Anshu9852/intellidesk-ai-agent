@@ -34,7 +34,7 @@ def ask_about_image(image_path: str, question: str) -> str:
         image_bytes = f.read()
 
     response = client.models.generate_content(
-        model="gemini-3.6-flash",
+        model="gemini-3.5-flash",
         contents=[
             types.Part.from_bytes(data=image_bytes, mime_type="image/png"),
             question,

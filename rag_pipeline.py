@@ -102,7 +102,7 @@ Jawab (Hindi ya Hinglish mein, seedha aur clear):"""
 
     client = genai.Client(api_key=API_KEY)
     response = client.models.generate_content(
-        model="gemini-3.6-flash",
+        model="gemini-3.5-flash",
         contents=prompt,
     )
     return response.text
@@ -156,7 +156,7 @@ Jawab (Hindi ya Hinglish mein, seedha aur clear):"""
 
     client = genai.Client(api_key=API_KEY)
     response = client.models.generate_content(
-        model="gemini-3.6-flash",
+        model="gemini-3.5-flash",
         contents=prompt,
     )
     return response.text

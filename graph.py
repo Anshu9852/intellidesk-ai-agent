@@ -36,7 +36,7 @@ Sawal: {state['question']}
 Sirf ek word likho: DOCUMENT ya GENERAL"""
 
     response = client.models.generate_content(
-        model="gemini-3.6-flash",
+        model="gemini-3.5-flash",
         contents=prompt,
     )
     decision = response.text.strip().upper()
@@ -55,7 +55,7 @@ def document_answer_node(state: AgentState) -> AgentState:
 def general_answer_node(state: AgentState) -> AgentState:
     print("[Node: general_answer] General knowledge se jawab diya ja raha hai...")
     response = client.models.generate_content(
-        model="gemini-3.6-flash",
+        model="gemini-3.5-flash",
         contents=state["question"],
     )
     return {"answer": response.text.strip()}

@@ -16,7 +16,7 @@ gemini_client = AsyncOpenAI(
 )
 
 model = OpenAIChatCompletionsModel(
-    model="gemini-3.6-flash",
+    model="gemini-3.5-flash",
     openai_client=gemini_client,
 )
 

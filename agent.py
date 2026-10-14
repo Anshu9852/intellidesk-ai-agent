@@ -69,7 +69,7 @@ Sirf JSON format mein jawab do, is tarah:
 {{"tool_to_use": "document_search" ya "general_knowledge", "reason": "chhota reason"}}"""
 
     response = client.models.generate_content(
-        model="gemini-3.6-flash",
+        model="gemini-3.5-flash",
         contents=decision_prompt,
         config={"response_mime_type": "application/json"},
     )
@@ -86,7 +86,7 @@ def general_knowledge_answer(query: str) -> str:
     """
     client = genai.Client(api_key=API_KEY)
     response = client.models.generate_content(
-        model="gemini-3.6-flash",
+        model="gemini-3.5-flash",
         contents=f"Is sawal ka seedha, chhota jawab do (Hindi/Hinglish mein): {query}",
     )
     return response.text
